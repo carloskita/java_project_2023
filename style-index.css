@@ -1,13 +1,15 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: PoetsenOne-Regular;
   src: url("fonte/PoetsenOne-Regular.ttf");
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: PoetsenOne-Regular;
+}
+
 h1 {
   font-family: "PoetsenOne-Regular";
   font-size: 36px;
@@ -22,7 +24,7 @@ h1 {
 .card-container {
   display: flex;
   flex-direction: column;
-  margin-left: 600px;
+  margin-left: 582px;
   width: 500px;
   margin-top: 60px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -40,7 +42,7 @@ p {
   margin-bottom: 15px;
   width: 306px;
   color: #999999;
-  margin-left: 12px;
+  margin-left: -1px;
 }
 .card h3 {
   text-align: center;
@@ -58,16 +60,25 @@ button[type="submit"] {
   color: white;
   border: none;
   margin-top: 3px;
-  padding: 10px 103px;
+  padding: 10px 131px;
   border-radius: 3px;
-  margin-left: 16px;
+
   margin-top: 36px;
+  cursor: pointer;
 }
 
 form input {
   border-top: none;
   border-left: none;
   border-right: none;
-  padding-right: 95px;
-  padding-bottom: 15px;
+  padding-right: 143px;
+  height: 30px;
+}
+
+#usuario {
+  margin-bottom: 12px;
+}
+
+.cadastro {
+  text-align: center;
 }
