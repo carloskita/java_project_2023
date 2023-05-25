@@ -5,13 +5,12 @@ import com.churrasco.java_project.models.AuthResidenceModel;
 import com.churrasco.java_project.services.AuthResidenceService;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.swing.text.html.Option;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.List;
@@ -29,6 +28,7 @@ public class AuthResidenceController{
         this.authResidenceService = authResidenceService;
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping
     public ResponseEntity<Object> saveAuthResidence(@RequestBody @Valid AuthResidenceDto authResidenceDto){
         if(authResidenceService.existsByUserCPF(authResidenceDto.getUserCPF())){
@@ -46,11 +46,13 @@ public class AuthResidenceController{
         return ResponseEntity.status(HttpStatus.CREATED).body(authResidenceService.save(authResidenceModel));
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN', 'ROLE_USER')")
     @GetMapping
     public ResponseEntity<List<AuthResidenceModel>> getAllAuthResidences(){
         return ResponseEntity.status(HttpStatus.OK).body(authResidenceService.findAll());
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN', 'ROLE_USER')")
     @GetMapping("/{id}")
     public ResponseEntity<Object> getOneAuthResidence(@PathVariable(value = "id")UUID id){
         Optional<AuthResidenceModel> authResidenceModelOptional = authResidenceService.findById(id);
@@ -60,6 +62,7 @@ public class AuthResidenceController{
         return ResponseEntity.status(HttpStatus.OK).body(authResidenceModelOptional.get());
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<Object> deleteAuthResidence(@PathVariable(value = "id") UUID id){
         Optional<AuthResidenceModel> authResidenceModelOptional = authResidenceService.findById(id);
@@ -70,6 +73,7 @@ public class AuthResidenceController{
         return ResponseEntity.status(HttpStatus.OK).body("Morador deletado com sucesso.");
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PutMapping("/{id}")
     public ResponseEntity<Object> updateAuthResidence(@PathVariable(value = "id") UUID id, @RequestBody @Valid AuthResidenceDto authResidenceDto){
         Optional<AuthResidenceModel> authResidenceModelOptional = authResidenceService.findById(id);

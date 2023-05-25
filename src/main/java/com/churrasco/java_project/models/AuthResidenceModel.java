@@ -2,7 +2,6 @@ package com.churrasco.java_project.models;
 
 import jakarta.persistence.*;
 
-import javax.management.relation.Role;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -85,7 +84,4 @@ public class AuthResidenceModel implements Serializable {
     public void setRegistrationDate(LocalDateTime registrationDate) {
         this.registrationDate = registrationDate;
     }
-
-    @Enumerated(EnumType.STRING)
-    private Role role;
 }
