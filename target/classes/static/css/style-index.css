@@ -72,15 +72,27 @@ button[type="submit"] {
   cursor: pointer;
 }
 
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+label[for="cpf"] {
+  font-size: 20px;
+}
+label[for="senha"] {
+  font-size: 20px;
+}
 form input {
   border-top: none;
   border-left: none;
   border-right: none;
+  text-decoration: none;
   width: 310px;
   height: 30px;
+  font-size: 18px;
 }
 
-#usuario {
+#form-cpf {
   margin-bottom: 12px;
 }
 

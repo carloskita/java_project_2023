@@ -77,10 +77,10 @@ button[type="submit"] {
   margin-top: 5px;
 }
 label[for="cpf"] {
-  font-size: 23px;
+  font-size: 20px;
 }
 label[for="senha"] {
-  font-size: 23px;
+  font-size: 20px;
 }
 form input {
   border-top: none;
@@ -88,10 +88,10 @@ form input {
   border-right: none;
   width: 310px;
   height: 30px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
-#usuario {
+#form-cpf {
   margin-bottom: 12px;
 }
 

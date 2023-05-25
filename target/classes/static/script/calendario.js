@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
         firstDayOfWeek = 7;
       }
       let getLastDayThisMonth = new Date(ano, mes + 1, 0).getDate();
-  
-      for (let i = -firstDayOfWeek + 1, index = 0; i < (42 - firstDayOfWeek) + 1; i++, index++) {
+
+
+      for (let i = -firstDayOfWeek + 1, index = 0; i < (42 - firstDayOfWeek) + 1; i++, index++) {  //corrigido firstdayofweek +2 para +1
         let dt = new Date(ano, mes, i);
         let dayTable = tableDays.getElementsByTagName('td')[index];
         dayTable.classList.remove('mes-anterior');
