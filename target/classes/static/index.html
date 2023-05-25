@@ -17,7 +17,7 @@
     <h3>Login</h3>
     <p>Preencha os dados do login para acessar</p>
     <form id="user" action="" method="get">
-      <label id="form-cpf" for="cpf">CPF:</label>
+      <label for="cpf">CPF:</label>
       <input
               type="text"
               id="cpf"
@@ -26,7 +26,7 @@
               maxlength="14"
               required
       />
-      <label for="senha">Senha</label>
+      <label for="senha">Senha:</label>
       <input type="password" id="senha" name="senha" required />
       <button type="submit">Entrar</button>
       <div class="error-message" id="cpf-error"></div>
@@ -74,7 +74,7 @@
         }
 
         if (resto !== parseInt(cpf.substring(9, 10))) {
-          alert("CPF inválido. Verifique os dígitos verificadores.");
+          alert("CPF inválido. Por favor verifique seu CPF.");
           return false;
         }
 
