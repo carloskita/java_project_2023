@@ -28,7 +28,7 @@ public class AuthResidenceController{
         this.authResidenceService = authResidenceService;
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     @PostMapping
     public ResponseEntity<Object> saveAuthResidence(@RequestBody @Valid AuthResidenceDto authResidenceDto){
         if(authResidenceService.existsByUserCPF(authResidenceDto.getUserCPF())){
@@ -46,13 +46,13 @@ public class AuthResidenceController{
         return ResponseEntity.status(HttpStatus.CREATED).body(authResidenceService.save(authResidenceModel));
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMIN', 'ROLE_USER')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
     @GetMapping
     public ResponseEntity<List<AuthResidenceModel>> getAllAuthResidences(){
         return ResponseEntity.status(HttpStatus.OK).body(authResidenceService.findAll());
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMIN', 'ROLE_USER')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
     @GetMapping("/{id}")
     public ResponseEntity<Object> getOneAuthResidence(@PathVariable(value = "id")UUID id){
         Optional<AuthResidenceModel> authResidenceModelOptional = authResidenceService.findById(id);
@@ -62,7 +62,7 @@ public class AuthResidenceController{
         return ResponseEntity.status(HttpStatus.OK).body(authResidenceModelOptional.get());
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<Object> deleteAuthResidence(@PathVariable(value = "id") UUID id){
         Optional<AuthResidenceModel> authResidenceModelOptional = authResidenceService.findById(id);
@@ -73,7 +73,7 @@ public class AuthResidenceController{
         return ResponseEntity.status(HttpStatus.OK).body("Morador deletado com sucesso.");
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     @PutMapping("/{id}")
     public ResponseEntity<Object> updateAuthResidence(@PathVariable(value = "id") UUID id, @RequestBody @Valid AuthResidenceDto authResidenceDto){
         Optional<AuthResidenceModel> authResidenceModelOptional = authResidenceService.findById(id);
