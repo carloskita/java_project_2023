@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style-cadastro.css" />
+
     <title>Cadastro</title>
   </head>
+
   <body>
     <!--nav-bar-->
     <header>
@@ -29,6 +31,7 @@
           type="text"
           id="nome"
           name="nome"
+          required
         /><br /><br />
 
         <label class="item-form" for="email">E-mail:</label>
@@ -37,6 +40,7 @@
           type="email"
           id="email"
           name="email"
+          required
         /><br /><br />
 
         <label class="item-form" for="telefone">Telefone:</label>
@@ -45,10 +49,17 @@
           type="tel"
           id="telefone"
           name="telefone"
+          required
         /><br /><br />
 
         <label class="item-form" for="cpf">CPF:</label>
-        <input class="item-form" type="text" id="cpf" name="cpf" /><br /><br />
+        <input
+          class="item-form"
+          type="text"
+          id="cpf"
+          name="cpf"
+          required
+        /><br /><br />
 
         <label class="item-form" for="apartamento"
           >Número do Apartamento:</label
@@ -58,10 +69,24 @@
           type="number"
           id="apartamento"
           name="apartamento"
+          required
         /><br /><br />
+
+        <label class="item-form" for="bloco">Bloco do Apartamento:</label>
+        <input
+          class="item-form"
+          type="number"
+          id="bloco_do_apartamento"
+          name="bloco_do_apartamento"
+          min="0"
+          required
+        />
+
+        <br /><br />
 
         <input class="item-form" type="submit" value="Cadastrar" />
       </form>
     </section>
   </body>
+  <script src="js/index.js"></script>
 </html>
