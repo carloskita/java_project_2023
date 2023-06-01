@@ -16,7 +16,7 @@
   <div class="card">
     <h3>Login</h3>
     <p>Preencha os dados do login para acessar</p>
-    <form id="user" action="" method="get">
+    <form id="user">
       <label for="cpf">CPF:</label>
       <input
               type="text"
@@ -27,10 +27,57 @@
       />
       <label for="senha">Senha:</label>
       <input type="password" id="senha" name="senha" required />
+      <span id="error"></span>
       <button type="submit">Entrar</button>
       <div class="error-message" id="cpf-error"></div>
     </form>
   </div>
 </div>
+<script src="script/autentication.js"></script>
+<script>
+
+const handleLogin = async (data) => {
+  const headers = new Headers();
+  headers.append("Content-Type", "application/json");
+
+  if(data.senha !== env){
+    alert("Usuario ou senha errado(s)");
+    return;
+  }
+
+  Object.entries(data).forEach(([key, value]) => {
+    headers.append(key, value);
+  });
+
+  const url = "http://localhost:8081/auth-residence";
+
+  const response = await fetch(url, {
+    method: "GET",
+    headers: headers,
+  });
+
+  if (response.ok) {
+    // Redirect to the new page upon successful login
+    window.open("http://localhost:8081/calendario.html", "_blank");
+  } else {
+    throw new Error("Login failed");
+  }
+};
+
+document.querySelector("form").addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const cpf = document.getElementById("cpf").value;
+  const senha = document.getElementById("senha").value;
+  const data = { cpf, senha };
+
+  try {
+    await handleLogin(data);
+  } catch (error) {
+    console.error(error);
+    // Handle the login error
+  }
+});
+
+</script>
 </body>
 </html>

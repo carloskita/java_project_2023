@@ -1,7 +1,12 @@
+@font-face {
+  font-family: PoetsenOne-Regular;
+  src: url("../font/PoetsenOne-Regular.ttf");
+}
+
 *{
     padding: 0%;
     margin: 0;
-    font-family: "PoetsenOne-Regular";
+    font-family: PoetsenOne-Regular;
 }
 body{
     background: #f1f1f1;
@@ -53,10 +58,10 @@ h2{
 }
 .calendario thead{
     /* modificar paleta de cores aqui */
-    background-color: rgb(185, 172, 147);
+    background-color: #027519;
     font-weight: 600;
     text-transform: uppercase;
-    border-bottom: 2px solid brown;
+    border-bottom: 2px solid black;
 }
 .calendario td{
     border: 1px solid #cbd1d2;
@@ -102,8 +107,28 @@ h2{
 .event.dia-atual::after{
     background: #f9f9f9;
 }
-@media(max-width){
-    .conteudo{
-    margin-left: 468px;
-    }
-}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #027519;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 14px 16px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #014c10;
+  }

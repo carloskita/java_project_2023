@@ -3,6 +3,7 @@ package com.churrasco.java_project.configs.security;
 import com.churrasco.java_project.models.UserModel;
 import com.churrasco.java_project.repositories.UserRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

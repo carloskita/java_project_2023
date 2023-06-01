@@ -87,4 +87,5 @@ public class AuthResidenceController{
 
         return ResponseEntity.status(HttpStatus.OK).body(authResidenceService.save(authResidenceModel));
     }
+
 }
