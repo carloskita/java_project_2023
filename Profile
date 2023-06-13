@@ -1,1 +1,0 @@
-web: gunicorn churrasqueira.wsgi --log-file -
