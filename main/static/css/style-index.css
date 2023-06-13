@@ -1,0 +1,244 @@
+@font-face {
+  font-family: PoetsenOne-Regular;
+  src: url("../font/PoetsenOne-Regular.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: PoetsenOne-Regular;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.centralizado {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 5px;
+}
+
+.card {
+  padding: 92px;
+}
+
+p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  color: #999999;
+}
+.card h3 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 36px;
+}
+
+#user {
+  margin-top: 38px;
+}
+
+button[type="submit"] {
+  background-color: #027519;
+  color: white;
+  border: none;
+  margin-top: 3px;
+  padding: 10px 135px;
+  border-radius: 3px;
+
+  margin-top: 36px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+label[for="cpf"] {
+  font-size: 20px;
+}
+label[for="senha"] {
+  font-size: 20px;
+}
+form input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 310px;
+  height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+#cpf {
+  margin-bottom: 15px;
+}
+
+.cadastro {
+  text-align: center;
+}
+
+@media (max-width: 504px) {
+  .card-container {
+    box-shadow: none;
+    margin: initial; /* Remove a margem definida anteriormente */
+    width: initial; /* Remove a largura definida anteriormente */
+  }
+}
+
+@media (max-width: 488px) {
+  .card-container {
+    margin-left: 0px;
+    overflow-x: hidden;
+    margin: initial; /* Remove a margem definida anteriormente */
+    width: initial; /* Remove a largura definida anteriormente */
+  }
+}
+@media (max-width: 462px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 460px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 452px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 446px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 436px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 432px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 422px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 420px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 400px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 390px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 388px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 384px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 366px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 346px) {
+  .card-container {
+    margin-left: 0px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 332px) {
+  .card-container {
+    margin-left: -2px;
+  }
+  * {
+    overflow-x: hidden;
+  }
+}
