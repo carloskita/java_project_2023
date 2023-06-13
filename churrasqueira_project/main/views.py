@@ -3,6 +3,9 @@ from .forms import RegisterForm
 from django.contrib.auth import login, logout, authenticate
 
 # Create your views here.
+def home(request):
+    return render(request, 'churrasqueira/home.html')
+
 def login(request):
     if request.method == "GET":
         return render(request, 'registration/login.html')
@@ -18,7 +21,7 @@ def cadastro(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)
+            # login(request, user)
             return redirect('/calendario')
     else:
         form = RegisterForm()
