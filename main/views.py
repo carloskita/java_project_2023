@@ -42,7 +42,6 @@ def cadastro(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)
             return redirect('/calendario')
     else:
         form = RegisterForm()
