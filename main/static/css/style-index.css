@@ -42,7 +42,7 @@ h1 {
 }
 
 .card {
-  padding: 92px;
+  padding: 124px;
 }
 
 p {
@@ -69,7 +69,7 @@ button[type="submit"] {
   padding: 10px 135px;
   border-radius: 3px;
 
-  margin-top: 36px;
+  margin-top: 2px;
   cursor: pointer;
 }
 

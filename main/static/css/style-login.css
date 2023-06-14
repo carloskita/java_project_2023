@@ -1,0 +1,20 @@
+@font-face {
+  font-family: PoetsenOne-Regular;
+  src: url("../font/PoetsenOne-Regular.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: PoetsenOne-Regular;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card-header {
+  width: 412px;
+  margin-top: 266px;
+}
